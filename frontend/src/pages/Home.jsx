@@ -45,11 +45,11 @@ function Home() {
       <h1 className="mb-4 text-center text-2xl font-bold text-gray-600 md:mb-6 lg:text-3xl ">
         Your Notes
       </h1>
-      <div className="  grid grid-cols-4 gap-4 w-full">
+      <div className="  grid grid-cols-2 gap-4 w-full md:grid-cols-3 lg:grid-cols-4">
         {notes &&
           notes.map((note) => {
             return (
-              <div className="pb-6 ">
+              <div className="pb-6 " key={note._id}>
                 <NoteCard
                   key={note._id}
                   note={note}
